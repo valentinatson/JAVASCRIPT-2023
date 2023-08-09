@@ -213,35 +213,91 @@ switch (jour) {
 
             //exercice
 
-let heure = Number(prompt("Veillez entrer l'heure"))
-let munite = Number(prompt("Veillez entrer la munite"))
+/* let heure = Number(prompt("Veillez entrer l'heure"))
+let minute = Number(prompt("Veillez entrer la minute"))
 let seconde = Number(prompt("Veillez entrer la seconde"))
 if (seconde>=0 && seconde<=59){
     seconde=seconde+1
 }
 if (seconde==59){
-    munite=munite + 1
+    minute=minute + 1
     seconde=0
 }
-if(munite==59 || munite==60){
-    if (munite==59 && seconde==59){
+if(minute==59 || minute==60){
+    if (minute==59 && seconde==59){
         heure = heure + 1
-        munite=0
+        minute=0
+        seconde=0
+    }
+    if(minute==60){
+        heure=heure + 1
+        minute=0
         seconde=0
     }
 }
+if(heure==24){
+    heure=0
+} */
+
+
+            // 2eme maniere
 
 
 
+/* let heure = Number(prompt("Veillez entrer l'heure"))
+let minute = Number(prompt("Veillez entrer la minute"))
+let seconde = Number(prompt("Veillez entrer la seconde"))
+
+if (seconde > 0 && seconde < 59){
+    seconde = seconde + 1
+    console.log(`${seconde}`);
+}else if(seconde == 59){
+    if (minute > 0 && minute < 59){
+
+        minute = minute + 1
+        seconde = seconde = 0
+        console.log(`${minute} : ${seconde}`);
+    }
+}else if(minute == 59){
+    if(heure > 0 && heure < 59){
+
+        heure = heure + 1
+        minute = minute = 0
+        console.log(`${heure} : ${seconde}`);
+    }
+} */
 
 
-//seconde
-if(seconde < 59){
-    console.log("il est:"+heure+":"+munite+":"+(seconde+1));
+
+                    // 3eme cas
+
+
+/* let heure = Number(prompt("Veillez entrer l'heure"))
+let minute = Number(prompt("Veillez entrer la minute"))
+let seconde = Number(prompt("Veillez entrer la seconde"))
+
+if(heure == 23 && minute == 59 && seconde == 59){
+    console.log("00 h 00 min 00 s");
+}else if(munite == 59 && seconde == 59){
+    console.log( (heure+1) + "h " + "00min" + "00s");
+}else if(minute < 59 && seconde == 59){
+    console.log(heure + "h " + (minute +1) + "min" + "00s");
+}else if(minute < 59 && seconde < 59){
+    console.log(heure + "h " + minute +"min"+(seconde+1));
+}else if(heure < 23 && minute < 59 && seconde < 59){
+    console.log(heure + (minute+1)+ "min" + (seconde+1) + "s");
 }else{
-    console.log("il est:"+heure+":"+(munite+1)+":"+0+0);
-}
+    console.log("vous ne connaissez pas l'heure");
+} */
 
 
 
-if
+                    // exercice table de multiplication
+
+
+let number = Number(prompt("Quelle table voulez-vous ?"))
+for (let i = 0; i < 13; i++){
+    //console.log(`${number} * ${i} = ${number * i}`);
+    console.log(number + "*" + i +"=" + (number * i));
+} 
+
